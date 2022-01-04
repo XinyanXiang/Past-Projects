@@ -1,0 +1,65 @@
+                     Chloe and Xinyan's books.py usage.txt                   
+
+NAME
+     python3 books.py -- search books list
+
+
+SYNOPSIS
+     books.py -t [titleString] [-bs 'title' | 'year']
+     books.py -y [-s STARTYEAR] [-e ENDYEAR]
+     books.py -a [authorString]
+     books.py -h
+     books.py -v
+
+DESCRIPTION
+     Books.py will search through the database by flags: it can search for 
+     strings within titles, author names, or search for books published in 
+     a year range. Only one of -t, -y, or -a can be used at a time. 
+	
+     Users can also view help and version statements. 
+
+     The following options are available:
+
+
+
+     -t --title     Search database for titles containing titleString
+	     (case-insensitive), returning list of books sorted by title.
+	     Search strings including space characters need to be surrounded
+             By quotations. If no titleString provided, prints all books.
+
+     -a --author    Search database for authors containing authorString
+	     (case-insensitive), returning list of books sorted by surname,
+	     ties broken by given name. Search strings including space 
+	     characters need to be surrounded by quotations. If no authorString
+	     provided, prints all authors. 
+
+     -y --year      Search database for books published within year range,
+	     inclusive, returning list of books sorted by publication year.
+	     Range indicated by -s and -e flags. If no flags provided, will
+	     print all books. Default values for -s is 0, and for -e is 
+	     a very large integer. 
+
+     -s --startyear Optional flag for -y, specifying start year. One integer
+	     required. 
+
+     -e --endyear   Optional flag for -y, specifying end year. One integer
+	     required. 
++
+     -bs --booksort Optional flag for -t. Override sorting list by alternative 
+	     criteria. Options are title or year.
+
+     -h --help      Print usage statement
+
+     -v --version   Print version
+
+
+
+     It is an error for improper inputs, such as "abc" with the -y flag. 
+
+     It is an error if no string follows -bs.
+
+     Example code: python3 books.py -t "the" -bs year
+                   python3 books.py -a "e"
+                   python3 books.py -y -s 2010 -e 2020
+     
+     

@@ -1,0 +1,74 @@
+<!--
+Kristin Albright and Xinyan Xiang
+24 November 2021
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='grammy.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='record.css') }}" />
+
+    <script type="text/javascript" src="{{ url_for('static', filename='grammy.js') }}" ></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='grammy.png') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grammy Awards</title>
+</head>
+
+    <a id="home_button" href="/">
+      <img class="home_b" src="{{ url_for('static', filename='grammy.png') }}" alt="home button with the grammy symbol">
+    </a>
+
+<body>
+    <!-- <input type="image" src="{{ url_for('static', filename='grammy.png') }}" name="home_buttom" class="img" id="home_buttom" /> -->
+    <ul>
+      <!-- <li id = 'home'></li> -->
+      <li><a href= "#helpMe" id='helpMe'>Help Me</a></li>
+      <h4>Search by</h4>
+      <li><a href= "#Year" id='year'>Award Year</a></li>
+      <select class="selector" id="grammy_selector" style="display:none"></select>
+
+      <li><a href="#Category" id='category'>Category</a></li>
+      <div class="wrap" style="display:none" id='search1'>
+         <div class="search">
+            <input type="text" class="searchTerm" id='category_search' placeholder="Song Of The Year">
+            <button type="submit" class="searchButton">+</button>
+         </div>
+      </div>
+
+      <li><a href="#Artist" id = "artist">Artist</a></li>
+      <div class="wrap" style="display:none" id='search2'>
+         <div class="search">
+            <input type="text" class="searchTerm" id='artist_search' placeholder="Artist Name ...">
+            <button type="submit" class="searchButton">+</button>
+         </div>
+      </div>
+
+      <li><a href="#Nominee" id = "nominee">Nominee (also winner)</a></li>
+      <div class="wrap" style="display:none" id='search3'>
+         <div class="search">
+            <input type="text" class="searchTerm" id='nominee_search' placeholder="Nominee Name ...">
+            <button type="submit" class="searchButton">+</button>
+         </div>
+      </div>
+
+    </ul>
+    <div style="margin-left:15%;padding:1px 6px;height:700px;top:10%;">
+      <p id="helpDoc"></p>
+      <div id = "record">
+      <div class="record">
+         <div class="inner" ></div>
+         <div class="overlay"></div>
+      </div>
+      </div>
+      <p id  = "text"> </p>
+      <p id="searchKey"></p>
+      <table id="displayTable"></table>
+      <div id="container"> </div>
+    </div>
+</body>
+</html>

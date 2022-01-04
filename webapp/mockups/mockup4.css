@@ -1,0 +1,92 @@
+
+
+/*
+Kristin Albright and Xinyan Xiang
+4 November 2021
+ */
+ body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  background-color: #fef3b5;
+  position: fixed;
+  top:20%;
+  height: 80%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #bf9000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #fef3b5;
+  font-size: 120%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(247, 175, 32);
+  color: white;
+}
+
+.img {
+
+  position:fixed;
+  width: 120px;
+  height:120px;
+
+}
+
+.vinyl_table {
+display: inline-block;
+margin-right: auto;
+margin-top: 100px;
+margin-left: 150px;
+margin-bottom: auto;
+}
+
+.search {
+  display: inline-flex;
+  width: 100%;
+  position: relative;
+}
+
+.searchTerm {
+  width: 100%;
+  padding: 5px;
+  height: 20px;
+  color: #fef3b5;
+}
+
+.searchTerm:focus{
+  color: #fef3b5;
+}
+
+.searchButton {
+  width: 30px;
+  height: 35px;
+  border: 1px solid #bf9000;
+  background: #bf9000;
+  text-align: center;
+  color: #fef3b5;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.wrap{
+  display: inline-flex;
+  width: 100%;
+  top: 80%;
+  left: 80%;
+}
